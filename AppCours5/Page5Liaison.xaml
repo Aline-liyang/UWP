@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="AppCours5.Page5Liaison"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppCours5"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Canvas>
+        <Rectangle Height="380" Canvas.Left="70" Stroke="Black" Canvas.Top="76" Width="255" RadiusX="48.667" RadiusY="48.667" />
+        <TextBlock Canvas.Left="90" Canvas.Top="94" Height="30" Width="203" Text="Calcul de l'IMC" TextAlignment="Center" Foreground="#FFE23737" FontWeight="Bold" />
+        <TextBlock Canvas.Left="100" Canvas.Top="160" Height="30" Width="77" Text="Poids (kg) :"/>
+
+        <TextBox x:Name="tbxPoids" Canvas.Left="200" Canvas.Top="160" Width="100" Background="#669F4040"  Text="{Binding Poids, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+        <TextBlock Canvas.Left="100" Canvas.Top="235" Height="30" Width="77" Text="Taille (m) :"/>
+        <TextBox x:Name="tbxTaille" Canvas.Left="200" Canvas.Top="235" Width="100" Background="#669F4040" Text="{Binding Taille, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock Canvas.Left="100" Canvas.Top="385" Height="30" Width="77" Text=" IMC :"/>
+        <TextBox x:Name="tbxIMC" Canvas.Left="200" Canvas.Top="385" Text="" Width="100" Background="#669F4040" IsReadOnly="True" />
+        <Button x:Name="btnCalculer" Content="Calculer" Canvas.Left="90" Canvas.Top="290" Width="210" Height="70" Click="BtnCalculer_Click"/>
+    </Canvas>
+
+</Page>
+

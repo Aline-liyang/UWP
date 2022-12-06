@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="AppCours5.Page7Liaison"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppCours5"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Canvas Margin="0,-4,0,4"  >
+        <Border Width="311" Height="435" BorderThickness="1,1,1,1" BorderBrush="#FFD65454" Canvas.Top="65" Canvas.Left="37" CornerRadius="20,20,20,20"/>
+        <Border Width="311" Height="435" BorderThickness="1,1,1,1" BorderBrush="#FFD65454" Canvas.Top="65" Canvas.Left="364" CornerRadius="20,20,20,20"/>
+        <TextBlock Text="Exemple pour Liaison de Données entre Contrôles" 
+            Canvas.Left="159" Canvas.Top="21"  FontWeight="Bold" TextDecorations="Underline" FontSize="14" Foreground="#FFA91ABC"/>
+        <TextBlock Canvas.Left="63" Canvas.Top="98" Text="Entrer Année :"/>
+        <TextBox x:Name="TbxAnnee" Height="30" Text="2020" Width="142" Canvas.Left="180" Canvas.Top="95"/>
+        <TextBlock Canvas.Left="427" Canvas.Top="90" Text="Année Entrée :"/>
+        <TextBox x:Name="TbxAnneeEntree" Height="30" Width="83" Canvas.Left="540" Canvas.Top="85" IsReadOnly="True"
+                Text="{Binding Text, ElementName=TbxAnnee}" />
+        <TextBlock Canvas.Left="59" Canvas.Top="150" Text="Choisir Valeur : "/>
+        <Slider x:Name="SldValeur" Canvas.Left="176" Canvas.Top="148" Height="29" Width="149" Maximum="100" TickPlacement="Outside" LargeChange="10" SmallChange="1" 
+                Value="26" TickFrequency="1" />
+        <TextBlock Canvas.Left="425" Canvas.Top="152" Text="Valeur choisie :"/>
+        <TextBox x:Name="TbxValeurChoisie" Height="30" Width="78" Canvas.Left="545" Canvas.Top="143" IsReadOnly="True"
+                Text="{Binding Value, ElementName=SldValeur}" />
+        <TextBlock Canvas.Left="122" Canvas.Top="203" Width="55" Text="Mois : "/>
+        <ListBox x:Name="LstListe"  Canvas.Left="186" Canvas.Top="203"  SelectedIndex="0" Width="146">
+            <ListBoxItem Content="Mai" />
+            <ListBoxItem Content="Juin"/>
+            <ListBoxItem Content="Juillet"/>
+            <ListBoxItem Content="Août"/>
+            <ListBoxItem Content="Septembre"/>
+        </ListBox>
+        <TextBlock Text="Mois Sélectionné :" Canvas.Left="407" Canvas.Top="199" Width="141" />
+        <TextBox x:Name="TbxMoisSelectionne" Height="30" Width="74" Canvas.Left="549" Canvas.Top="199" IsReadOnly="True"
+                Text="{Binding SelectedValue.Content, ElementName=LstListe}"/>
+
+
+    </Canvas>
+</Page>
+
