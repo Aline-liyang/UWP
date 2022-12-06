@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="Eval4LY.Exo4Page1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Eval4LY"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Border Height="500" Width="750"  >
+
+        <Grid   Height="400" Width="700" >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Source="/Assets/Image1Halters.jpg"  Width="225" Stretch="Fill" HorizontalAlignment="Left"/>
+            <Image Source="/Assets/Image2TourTaille.jpg" Grid.Column="1" Width="225" Stretch="Fill" />
+            <Image Source="/Assets/Image3Joggers.jpg"  Grid.Column="2" Width="225"  Stretch="Fill" HorizontalAlignment="Right" />
+
+
+            <StackPanel Orientation="Vertical" Grid.Row="1" Grid.ColumnSpan="3" Background="#FF0D790E" >
+                <TextBlock x:ConnectionId='2' x:Name="Info1"   Text="Votre Centre de Conditionement" Height="70" Width="700"  VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="28" TextAlignment="Center" Foreground="#FFF6F3F3"  />
+                <TextBlock x:ConnectionId='3' x:Name="Info2"   Text="L'etoile du Sud" Height="30" Width="700"  VerticalAlignment="Top" HorizontalAlignment="Center" TextAlignment="Center" Foreground="#FFF6F3F3" />
+            </StackPanel>
+
+
+
+        </Grid>
+    </Border>
+</Page>
+
