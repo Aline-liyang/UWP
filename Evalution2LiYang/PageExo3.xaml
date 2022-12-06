@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="Evalution2LiYang.PageExo3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Evalution2LiYang"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="500" Width="400">
+    <Canvas>
+        <Rectangle Height="380" Canvas.Left="70" Stroke="Black" Canvas.Top="76" Width="255" RadiusX="48.667" RadiusY="48.667" />
+        <TextBlock Canvas.Left="100" Canvas.Top="94" Height="30" Width="203" Text="Collete Dons" TextAlignment="Center" Foreground="#FF0B0404" FontWeight="Bold" />
+        <TextBlock Canvas.Left="131" Canvas.Top="166" Height="30" Width="77" Text=" Donateur :" RenderTransformOrigin="1.058,0.942"/>
+        <TextBox x:Name="tbxDonateur" Canvas.Left="200" Canvas.Top="160" Text="" Height="30" Width="100"  TextChanged="tbxDonateur_TextChanged"/>
+        <TextBlock Canvas.Left="131" Canvas.Top="206" Height="30" Width="77" Text=" Don :" RenderTransformOrigin="1.058,0.942"/>
+        <TextBox x:Name="tbxDon" Canvas.Left="200" Canvas.Top="206" Text="" Height="30" Width="100"  TextChanged="tbxDon_TextChanged"/>
+        <Button x:Name="btn1" Content="Ajouter Don" Canvas.Left="110" Canvas.Top="259" Width="180" Click="btn1_Click" TabIndex="0"/>
+        <Button x:Name="btn2" Content="Parcourir" Canvas.Left="110" Canvas.Top="299" Width="180" Click="btn2_Click" TabIndex="0"/>
+        <TextBlock Canvas.Left="100" Canvas.Top="385" Height="30" Width="92" Text=" Total Dons :"/>
+        <TextBox x:Name="tbxTotalDons" Canvas.Left="200" Canvas.Top="385" Text="0" Height="34" Width="100"  IsReadOnly="True"/>
+
+    </Canvas>
+</Page>
